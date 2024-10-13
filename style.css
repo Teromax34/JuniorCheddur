@@ -122,7 +122,7 @@ h6 {
 
 article {
     border: 14px solid ;
-    border-image: url(https://raw.githubusercontent.com/Teromax34/JuniorCheddur/refs/heads/master/images/cirno-frame.png) 28 round;
+    border-image: url(https://raw.githubusercontent.com/Teromax34/JuniorCheddur/refs/heads/master/images/cirno-frame.png) 14 round;
     padding: 2px;
     margin: 1pc;
 }
