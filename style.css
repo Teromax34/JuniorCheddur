@@ -1,16 +1,58 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents scrollbars */
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; 
+    height: 100%;
+    background-repeat: repeat; 
+}
+
+.layer1 {
+    background-image: url('images/KettleParallaxBG.png'); /* Replace with your first image */
+    animation: moveBackground1 30s linear infinite; /* Adjust duration for speed */
+}
+
+.layer2 {
+    background-image: url('images/KettleParallaxNeb.png'); /* Replace with your second image */
+    animation: moveBackground2 20s linear infinite; /* Adjust duration for speed */
+}
+
+@keyframes moveBackground1 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%); /* Move left by half the width */
+    }
+}
+
+@keyframes moveBackground2 {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-25%); /* Move left by less than half */
+    }
+}
+
+#body {
+    position: relative;
+    z-index: 1; /* Make sure the text is above the background */
+}
+
 .inter-body {
     font-family: "Inter", system-ui;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
 }
-
-.bottom-cirno {
-    position:fixed;
-    bottom:0px;
-    left:75%;
-}
-
 /* from https://github.com/picocss/pico/discussions/482#discussioncomment-9043725 - thanks! */
 :root {
     --pico-font-family-sans-serif: Inter, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, Helvetica, Arial, "Helvetica Neue", sans-serif, var(--pico-font-family-emoji);
@@ -72,12 +114,13 @@ h6 {
 }
 
 article {
-    border: 1px solid var(--pico-muted-border-color);
-    /* Original doesn't have a border */
-    border-radius: calc(var(--pico-border-radius) * 2);
-    /* Original: var(--pico-border-radius) */
+    border: 14px solid ;
+    border-image: url(/images/cirno-frame.png) 14 round;
+    
 }
-
+article>div {
+    background-color: rgba(83,97,189,0.5);
+}
 article>footer {
     border-radius: calc(var(--pico-border-radius) * 2);
     /* Original: var(--pico-border-radius) */
