@@ -123,10 +123,13 @@ h6 {
 article {
     border: 14px solid ;
     border-image: url(/images/cirno-frame.png) 14 round;
-    
+    padding: 2px;
+    margin: 1pc;
 }
 article>div {
     background-color: rgba(83,97,189,0.5);
+    border-radius: 5px;
+    padding: 10px;
 }
 article>footer {
     border-radius: calc(var(--pico-border-radius) * 2);
