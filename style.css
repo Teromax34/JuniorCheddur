@@ -2,7 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden; /* Prevents scrollbars */
+    overflow-x: hidden; /* Prevents scrollbars */
+    color:azure;
 }
 
 .background {
@@ -44,7 +45,7 @@ html, body {
 
 #body {
     position: relative;
-    z-index: 1; /* Make sure the text is above the background */
+    z-index: 1; 
 }
 
 .inter-body {
@@ -52,6 +53,24 @@ html, body {
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav>ul:nth-of-type(2) {
+    display: flex;
+}
+
+nav>ul:nth-of-type(2)>li {
+    padding-right: 2em;
+    padding-top: 1em;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .bottom-cirno {
