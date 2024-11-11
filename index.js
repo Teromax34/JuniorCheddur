@@ -1,4 +1,4 @@
-const funkyStationUrl = "https://status.funkystation.org/status";
+const funkyStationUrl = "https://status.funkystation.org/lrp/status";
 
 let startDate; // Declare startDate in the outer scope
 let inputTime = '0:00:00'; // Initialize inputTime

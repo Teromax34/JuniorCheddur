@@ -1,9 +1,18 @@
+@font-face {
+    font-family: "DOS"; 
+    src: url('fonts/Px437_DOS-V_re_ANK24.woff2') format('woff2');
+}
+
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
     overflow-x: hidden; /* Prevents scrollbars */
     color:azure;
+    font-family: "DOS", "Courier New", Courier, monospace;
+    font-smooth: never;
+    -webkit-font-smoothing: none;
+    -moz-font-smoothing: greyscale;
 }
 
 .background {
@@ -48,8 +57,15 @@ html, body {
     z-index: 1; 
 }
 
+a:link {
+    color: #588bdc;
+}
+
+a:visited {
+    color: #7c5acc;
+}
+
 .inter-body {
-    font-family: "Inter", system-ui;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
@@ -58,6 +74,8 @@ html, body {
 nav {
     display: flex;
     justify-content: space-between;
+    background-color: #1a1f42a8;
+    width: 100%;
 }
 
 nav>ul:nth-of-type(2) {
@@ -150,6 +168,8 @@ article>div {
     border-radius: 5px;
     padding: 10px;
 }
+
+
 article>footer {
     border-radius: calc(var(--pico-border-radius) * 2);
     /* Original: var(--pico-border-radius) */
